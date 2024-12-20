@@ -1,0 +1,313 @@
+.container {
+    display: flex;
+    margin-top: 1em;
+    height: 75dvh;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-image: url('../../../assets/img/spoko.png'); // Jemné pozadie
+    background-repeat: repeat;
+  
+    .upload-section, .report-section {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 45%;
+      height: 85%;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    }
+  
+    .upload-section {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+        margin: 1em 0;
+  
+        .upload-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 10px;
+            border: dashed black 2px;
+            height: 75%;
+            
+            .upload-icon {
+            margin: 10px auto;
+    
+            img {
+                width: 60px;
+            }
+            }
+    
+            .file-types {
+            color: black;
+            font-size: 12px;
+            font-weight: 300;
+            }
+        }
+  
+      .progress-text {
+        height: 2em;
+        display: flex;
+        flex-direction: column;
+        font-style: italic;
+        margin: 10px 0;
+        span{
+            margin-top: .3em;
+        }
+      }
+  
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+  
+        .start-btn{
+            background-color: #386641;
+            color: white;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                background-color: #203925;
+                border-radius: 0;
+            }
+        }
+
+        .upload-btn{
+            background-color: #F4A261;
+            color: white;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                background-color: #754f30;
+                border-radius: 0;
+            }
+        }
+        button {
+            border: none;
+            border-radius: 20px;
+            width: 49%;
+            height: 3em;
+            cursor: pointer;
+            
+
+          &:disabled{
+            border: none;
+            border-radius: 20px;
+            background-color: #ccc;
+            width: 49%;
+            height: 3em;
+            color: #666;
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  
+    .report-section {
+      display: flex;
+      flex-direction: column;
+  
+      .report-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 10px 10px 10px;
+        border-bottom: dashed 2px black;
+  
+        h2 {
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+  
+        .tabs {
+          display: flex;
+  
+          .tab-btn {
+            background-color: transparent;
+            border: none;
+            padding: 5px 10px;
+            margin-right: 5px;
+            cursor: pointer;
+  
+            &.active {
+              border-bottom: 2px solid black;
+              font-weight: bold;
+            }
+          }
+        }
+  
+        .export-icon img {
+          width: 20px;
+          cursor: pointer;
+        }
+      }
+  
+      .report-content {
+        flex: 1;
+        margin-bottom: 10px;
+        height: 90%;
+      }
+  
+      .progress-detection {
+        font-style: italic;
+        text-align: center;
+      }
+    }
+  }
+
+.icon{
+    font-size: 3em;
+    color: #003049;
+    cursor: pointer;
+}
+
+.icon-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    a{
+        margin-left: 1em;
+        color:#C1121F;
+        cursor: pointer;
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+}
+  
+.report-grouped{
+    height: 75%;
+    border: dashed 2px black;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+  .loading-bar {
+    height: 100%;
+    background-color: #C1121F;
+    transition: width 0.3s ease-in-out;
+  }
+
+.uploaded{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border: dashed black 2px;
+    height: 75%;
+    background-image: url("../../../assets/img/DALL·E 2024-11-20 22.53.06 - A realistic photograph-style depiction of a city as seen through a webcam. The view includes a busy urban street with pedestrians, cars, and modern bu.webp");
+    background-size: cover;
+}
+
+.report-container {
+    padding: 20px;
+    max-width: 500px;
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    margin-top: 3em;
+    text-align: left;
+  }
+  
+  .report-details {
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
+  .report-details p {
+    margin: 4px 0;
+  }
+  
+  .report-details strong {
+    font-weight: bold;
+    &:first-child{
+        margin-right: 7em;
+    }
+  }
+  
+  .report-warning {
+    color: #C1121F;
+    font-size: 1em;
+    font-weight: normal;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.2em;
+  }
+
+  .details-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+  }
+
+  .details-images{
+    margin: 1em 4em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .rectangle{
+    background-color: #666;
+    width: 100px;
+    height: 50px;
+    margin-right: 1em;
+  }
+
+  .item{
+    margin-bottom: 1em;
+  }
+
+  .export-icon {
+    position: relative; /* Potrebné pre správnu pozíciu dropdown menu */
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50%; /* Zobrazí menu tesne pod ikonou */
+    right: 10%;
+    background: #C1121F;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    padding: 0.5em 0;
+    border-radius: 4px;
+    min-width: 120px;
+    z-index: 10;
+
+    /* Skryjeme menu */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu button {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 0.5em 1em;
+    color: #FFF;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.dropdown-menu button:hover {
+    background: #680a10;
+}
+
+.export-icon:hover .dropdown-menu {
+    /* Zobrazíme menu */
+    opacity: 1;
+    top:120%;
+    visibility: visible;
+}
+
+
+  

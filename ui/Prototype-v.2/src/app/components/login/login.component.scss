@@ -1,0 +1,124 @@
+
+// Global Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  // Main Container
+  .container {
+  
+    // Main Content
+    .main-content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 82vh;
+      padding: 2em;
+  
+      .welcome-text {
+        max-width: 50%;
+        margin-left: 6em;
+        h1 {
+          font-size: 2.5em;
+          color: #003049;
+          margin-bottom: 0.5em;
+        }
+        p {
+          color: gray;
+          margin-bottom: 1.5em;
+        }
+        .contact-number {
+          color: #C1121F;
+          font-size: 1.5em;
+          margin-bottom: 1.5em;
+        }
+        .social-icons i {
+          font-size: 2em;
+          margin-right: 0.5em;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+  
+          &:hover {
+            color: #005583;
+          }
+        }
+      }
+  
+      .background-image{
+        display: flex;
+        justify-content: center;
+        height: 60dvh;
+        width: 35dvw;
+        align-items: center;
+        margin-right: 6em;
+        background-image: url("../../../assets/img/back.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:100%;
+      }
+
+      // Login Form Card
+      .login-card {
+        width: 70%;
+        height: 75%;
+        background-color: white;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+        padding: 2em;
+        border-radius: 10px;
+  
+        h2 {
+          margin-bottom: 0.5em;
+          color: #003049;
+        }
+  
+        a {
+          color: #C1121F;
+          font-size: 0.9em;
+          display: block;
+          margin-bottom: 1em;
+          text-decoration: underline;
+        }
+  
+        form {
+          display: flex;
+          flex-direction: column;
+  
+          input {
+            margin-bottom: 1em;
+            font-size: .9em;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+          }
+  
+          .forgot-password {
+            color: #C1121F;
+            font-size: 0.9em;
+            text-align: right;
+            margin-bottom: 1em;
+            text-decoration: underline;
+          }
+  
+          .login-btn {
+            background-color: #003049;
+            color: white;
+            padding: 0.7em;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+  
+            &:hover {
+              background-color: #005583;
+              border-radius: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  

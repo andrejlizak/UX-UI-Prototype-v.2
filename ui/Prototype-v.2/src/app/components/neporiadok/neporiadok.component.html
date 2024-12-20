@@ -1,0 +1,138 @@
+<div class="container">
+    <!-- Left Section: Upload Area -->
+    <div class="upload-section">
+      <div *ngIf="!uploaded"  class="upload-box">
+        <i (click)="upload()" class="fa-solid fa-upload icon"></i>
+        <span style="margin-top: 1em; color: gray;"><i>Click / Drag & drop</i></span>
+        <div (click)="upload()" class="icon-box">
+            <a><i class="fa-regular fa-image" style="font-size: 2em;"></i></a>
+            <a><i class="fa-solid fa-film" style="font-size: 2em;"></i></a>
+            <a><i class="fa-solid fa-video" style="font-size: 2em;"></i></a>
+        </div>
+        <p class="file-types">
+          PNG, HLS, JPEG, TIFF, BIT, MP4, WAV, MOV
+        </p>
+      </div>
+      <div *ngIf="uploaded"  class="uploaded">
+
+      </div>
+      <div *ngIf="uploadProgress" class="progress-text">
+        <div class="loading-bar" [style.width.%]="loadingProgress"></div>
+        <span >{{uploadText}}</span>
+      </div>
+      <div class="buttons">
+        <button class="start-btn" [disabled]="!uploaded" (click)="startDetection()">Start detection</button>
+        <button class="upload-btn" [disabled]="!uploaded" (click)="reset()">Upload new media</button>
+      </div>
+    </div>
+  
+    <!-- Right Section: Report -->
+    <div class="report-section">
+      <div class="report-grouped">
+        <div class="report-header">
+            <h2>Report</h2>
+            <div class="tabs">
+              <button class="tab-btn" (click)="toggleActive()" 
+              [ngClass]="{'active': isActive, 'inactive': !isActive}">Text</button>
+
+              <button class="tab-btn" (click)="toggleActive()" 
+              [ngClass]="{'active': !isActive, 'inactive': isActive}">Images</button>
+            </div>
+            <div class="export-icon" style="position: relative;">
+                <i *ngIf="detected" class="fa-solid fa-file-export" style="font-size: 1.5em;"></i>
+                <div *ngIf="isActive && detected" class="dropdown-menu">
+                    <button (click)="exportToXlsx()">Export to TXT</button>
+                    <button (click)="exportToXlsx()">Export to XLSX</button>
+                </div>
+                <div *ngIf="!isActive && detected" class="dropdown-menu" style="width:fit-content;">
+                    <button (click)="exportToXlsx()">Export as ZIP</button>
+                    <button (click)="exportToXlsx()">Export as Folder</button>
+                    <button (click)="exportToXlsx()">Export as plain PNG</button>
+                </div>
+            </div>
+          </div>
+          <div class="report-content">
+            <div *ngIf="detected && isActive" class="report-container">
+                <div class="details-container">
+                    <div class="report-details">
+                        <p><strong>Plastic:</strong></p>
+                        <p><strong>Paper:</strong></p>
+                        <p><strong>Water:</strong></p>
+                        <p><strong>Weather:</strong></p>
+                        <p><strong>Situation:</strong></p>
+                      </div>
+                      <div class="report-details">
+                          <p>14</p>
+                          <p>4</p>
+                          <p>7%</p>
+                          <p>after rain</p>
+                          <p>medium well</p>
+                      </div>
+                </div>
+                <p class="report-warning">
+                  Needed 2 cleaners for cleaning trash and water cleaner.
+                </p>
+              </div>   
+              
+              <div *ngIf="detected && !isActive" class="report-container-images">
+                <div class="details-images">
+                    <div class="item">
+                        <div class="rectangle"></div>
+                        <span>Image</span>
+                    </div>
+                    <div class="item">
+                        <div class="rectangle"></div>
+                        <span>Image</span>
+                    </div>
+                    <div class="item">
+                        <div class="rectangle"></div>
+                        <span>Image</span>
+                    </div>
+                    <div class="item">
+                        <div class="rectangle"></div>
+                        <span>Image</span>
+                    </div>
+                    <div class="item">
+                        <div class="rectangle"></div>
+                        <span>Image</span>
+                    </div>
+                    <div class="item">
+                        <div class="rectangle"></div>
+                        <span>Image</span>
+                    </div>
+                    <div class="item">
+                        <div class="rectangle"></div>
+                        <span>Image</span>
+                    </div>
+                    <div class="item">
+                        <div class="rectangle"></div>
+                        <span>Image</span>
+                    </div>
+                    <div class="item">
+                        <div class="rectangle"></div>
+                        <span>Image</span>
+                    </div>
+                    <div class="item">
+                        <div class="rectangle"></div>
+                        <span>Image</span>
+                    </div>
+                    <div class="item">
+                        <div class="rectangle"></div>
+                        <span>Image</span>
+                    </div>
+                    <div class="item">
+                        <div class="rectangle"></div>
+                        <span>Image</span>
+                    </div>
+
+                </div>
+              </div>
+          </div>
+      </div>
+      <div *ngIf="detectionProgress" class="progress-text" style="text-align: center;">
+        <div class="loading-bar" style="height: 4.8px; margin-top:.6em;" [style.width.%]="detectionLoadProgress"></div>
+        <span style="font-style: italic; margin-top: .2em; display:block;">{{detectionText}}</span>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,34 @@
+<div class="nav-container">
+    <div class="img">
+        <img src="../../../assets/img/logoDetectok.png" alt="">
+    </div>
+    <div *ngIf="!showMenuItems" class="btn-container">
+        <button (click)="moveToRegister()">Register</button>
+        <button (click)="moveToLogin()" class="login">Login</button>
+    </div>
+    <div class="nav" *ngIf="showMenuItems">
+        <button
+        (click)="toggleActive()" 
+        [ngClass]="{'active': !isActive, 'inactive': isActive}">
+            <i class="fa-solid fa-car"></i>
+            <span>Detekcia premávky</span>
+        </button>
+        <button
+            (click)="toggleActive()" 
+            [ngClass]="{'active': isActive, 'inactive': !isActive}"
+            >
+            <i class="fa-solid fa-trash"></i>
+            <span>Detekcia neporiadku</span>
+        </button>
+    </div>
+    <div class="user" *ngIf="showMenuItems" style="position: relative;">
+        <img src="./../../../assets/img/DALL·E 2024-11-20 00.51.14 - A humorous depiction of an IT administrator sitting at a cluttered desk with multiple computer screens showing error messages. The administrator is we.webp" alt="">
+        <i class="fa-solid fa-caret-down"></i>
+        <div class="dropdown-menu">
+            <button (click)="moveToKeys()" >Registration keys</button>
+            <button (click)="moveToDetection()" >Detection</button>
+            <button (click)="moveToAbout()" >About</button>
+            <button (click)="logout()">Sign out</button>
+        </div>
+    </div>
+</div>

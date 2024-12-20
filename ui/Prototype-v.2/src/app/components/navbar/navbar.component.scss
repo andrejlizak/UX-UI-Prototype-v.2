@@ -1,0 +1,143 @@
+.nav-container{
+    margin: 0;
+    padding: 0;
+
+    height: 18dvh;
+    width: 100%;
+    box-shadow: 0 4px 2px -2px gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    img{
+        width: 180px;
+        height: auto;
+    }
+}
+
+.img{
+    margin-left: 2em;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.btn-container{
+    margin-right: 2em;
+
+    button{
+        margin-left: .4em;
+        border: none;
+        background-color: transparent;
+        padding: 10px 20px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    button:hover{
+        background-color: #b4c1c9;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .login{
+        background-color: #003049;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .login:hover{
+        background-color: #005583;
+        border-radius: 0px;
+    }
+
+}
+
+.user{
+    margin-right: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+    img{
+        margin-right: .8em;
+        width: 50px;
+        height: auto;
+        border-radius: 100%;
+    }
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50%; /* Zobrazí menu tesne pod ikonou */
+    right: 10%;
+    background: #C1121F;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    padding: 0.5em 0;
+    border-radius: 4px;
+    min-width: 150px;
+    z-index: 10;
+
+    /* Skryjeme menu */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu button {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 0.5em 1em;
+    color: #FFF;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.dropdown-menu button:hover {
+    background: #680a10;
+}
+
+.user:hover .dropdown-menu {
+    /* Zobrazíme menu */
+    opacity: 1;
+    top:120%;
+    visibility: visible;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    button{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        margin-right: 1em;
+        width: 155px;
+        height: 55px;
+        border: none;
+        background-color: white;
+        i{
+            margin-bottom: .3em;
+            font-size: 1.4em;
+        }
+
+        &:hover{
+            background-color: #003049;
+            color: white; 
+            cursor: pointer;
+        }
+
+        &.active{
+            background-color: #003049;
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+<div class="container">
+  
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Left Section -->
+      <div class="welcome-text">
+        <h1>Welcome to the <br />detect+ User area</h1>
+        <p><em>To request registration key, just call us</em></p>
+        <h2 class="contact-number">
+          +421 098 224 111<br />
+          +420 131 032 674
+        </h2>
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+  
+      <!-- Login Form -->
+      <div class="background-image">
+        <div class="login-card">
+            <h2>Use your credentials to login</h2>
+            <a href="#">Don't have account?</a>
+            <form (ngSubmit)="onLogin()">
+              <input type="text" placeholder="Username/E-mail" 
+                [(ngModel)]="username"
+                name="username"
+                required
+              />
+              <input type="password" placeholder="Password" 
+                [(ngModel)]="password"
+                name="password"
+                required
+              />
+              <a href="#" class="forgot-password">Forgot password?</a>
+              <button type="submit" class="login-btn">Login</button>
+            </form>
+      </div>
+      </div>
+    </div>
+  </div>
+  

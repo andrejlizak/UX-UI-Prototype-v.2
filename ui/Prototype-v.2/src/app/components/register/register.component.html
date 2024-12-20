@@ -1,0 +1,52 @@
+<div class="container">
+  
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Left Section -->
+      <div class="welcome-text">
+        <h1>Welcome to the <br />detect+ User area</h1>
+        <p><em>To request registration key, just call us</em></p>
+        <h2 class="contact-number">
+          +421 098 224 111<br />
+          +420 131 032 674
+        </h2>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-linkedin-in"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+  
+      <!-- Login Form -->
+      <div class="background-image">
+        <div class="login-card">
+            <h2>Take a registration here</h2>
+            <p><i>All fields are required!</i></p>
+            <form (ngSubmit)="onSubmit()">
+              <input type="text" placeholder="Username" 
+                [(ngModel)]="username"
+                required
+              />
+              <input type="text" placeholder="E-mail" 
+                [(ngModel)]="email"
+                required
+              />
+              <input type="password" placeholder="Password" 
+                [(ngModel)]="password"
+                required
+              />
+              <input type="password" placeholder="Repeat password" 
+                [(ngModel)]="repeatPassword"
+                required
+              />
+              <input type="text" placeholder="Registration key" 
+                [(ngModel)]="registrationKey"
+                required
+              />
+              <button type="submit" class="login-btn">Register</button>
+            </form>
+      </div>
+      </div>
+    </div>
+  </div>
+  
